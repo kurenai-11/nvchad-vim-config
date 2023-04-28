@@ -13,7 +13,7 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = {"html", "css", "bash", "javascript", "typescript", "tsx", "json", "dart"},
+      ensure_installed = { "html", "css", "bash", "javascript", "typescript", "tsx", "json", "dart" },
     },
   },
   {
@@ -22,7 +22,7 @@ local plugins = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
         require "custom.configs.null-ls"
-     end,
+      end,
     },
     config = function()
       require "plugins.configs.lspconfig"
@@ -30,8 +30,8 @@ local plugins = {
     end,
   },
   {
-   "williamboman/mason.nvim",
-   opts = {
+    "williamboman/mason.nvim",
+    opts = {
       ensure_installed = {
         "lua-language-server",
         "html-lsp",
