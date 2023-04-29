@@ -1,1 +1,3 @@
-return {}
+return {
+  Comment = { italic = true }
+}
