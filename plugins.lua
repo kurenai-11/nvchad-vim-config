@@ -14,7 +14,15 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = { "html", "css", "bash", "javascript", "typescript", "tsx", "json", "dart" },
+      autotag = {
+        enable = true
+      }
     },
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    event = "VeryLazy"
   },
   {
     "neovim/nvim-lspconfig",
