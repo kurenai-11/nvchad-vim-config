@@ -1,5 +1,5 @@
----@type ChadrcConfig 
- local M = {}
- M.ui = {theme = 'bearded-arc'}
- M.plugins = 'custom.plugins'
- return M
+---@type ChadrcConfig
+local M = {}
+M.ui = { theme = 'ayu_dark' }
+M.plugins = 'custom.plugins'
+return M
