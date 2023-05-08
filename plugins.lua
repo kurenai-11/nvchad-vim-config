@@ -13,7 +13,8 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = { "html", "css", "bash", "javascript", "typescript", "tsx", "json", "dart" },
+      ensure_installed = { "html", "css", "bash", "javascript", "typescript", "tsx", "json", "dart", "markdown",
+        "markdown_inline" },
       autotag = {
         enable = true
       }
@@ -38,6 +39,13 @@ local plugins = {
     end,
   },
   {
+    "nvimdev/lspsaga.nvim",
+    event = "LspAttach",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -59,6 +67,11 @@ local plugins = {
     'akinsho/flutter-tools.nvim',
     ft = "dart",
     opts = {
+      color = {
+        enabled = true,
+        background = true,
+        foreground = true,
+      },
       lsp = {
         on_attach = on_attach,
         capabilities = capabilities,
